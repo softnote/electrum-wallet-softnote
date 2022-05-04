@@ -1,0 +1,8 @@
+{
+    "electrum.softnote.org": {
+        "pruning": "-",
+        "s": "54002",
+        "t": "54001",
+        "version": "1.16.0"
+    }
+}
