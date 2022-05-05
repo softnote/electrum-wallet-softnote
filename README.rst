@@ -4,9 +4,7 @@ Electrum - Lightweight Softnote client
 ::
 
   Licence: MIT Licence
-  Author: Thomas Voegtlin
   Language: Python (>= 3.6)
-  Homepage: https://electrum.org/
 
 
 .. image:: https://travis-ci.org/spesmilo/electrum.svg?branch=master
@@ -25,10 +23,6 @@ Electrum - Lightweight Softnote client
 
 Getting started
 ===============
-
-(*If you've come here looking to simply run Electrum,* `you may download it here`_.)
-
-.. _you may download it here: https://electrum.org/#download
 
 Electrum itself is pure Python, and so are most of the required dependencies,
 but not everything. The following sections describe how to run from source, but here
@@ -147,19 +141,4 @@ Android
 See :code:`contrib/android/Readme.md`.
 
 
-Contributing
-============
 
-Any help testing the software, reporting or fixing bugs, reviewing pull requests
-and recent changes, writing tests, or helping with outstanding issues is very welcome.
-Implementing new features, or improving/refactoring the codebase, is of course
-also welcome, but to avoid wasted effort, especially for larger changes,
-we encourage discussing these on the issue tracker or IRC first.
-
-Besides `GitHub`_, most communication about Electrum development happens on IRC, in the
-:code:`#electrum` channel on Libera Chat. The easiest way to participate on IRC is
-with the web client, `web.libera.chat`_.
-
-
-.. _web.libera.chat: https://web.libera.chat/#electrum
-.. _GitHub: https://github.com/spesmilo/electrum
