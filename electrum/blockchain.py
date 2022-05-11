@@ -297,8 +297,8 @@ class Blockchain(Logger):
             raise Exception("hash mismatches with expected: {} vs {}".format(expected_header_hash, _hash))
         if prev_hash != header.get('prev_block_hash'):
             raise Exception("prev hash mismatch: %s vs %s" % (prev_hash, header.get('prev_block_hash')))
-        if constants.net.TESTNET:
-            return
+        
+        return
         bits = cls.target_to_bits(target)
         if bits != header.get('bits'):
             raise Exception("bits mismatch: %s vs %s" % (bits, header.get('bits')))
@@ -515,8 +515,8 @@ class Blockchain(Logger):
 
     def get_target(self, index: int) -> int:
         # compute target from chunk x, used in chunk x+1
-        if constants.net.TESTNET:
-            return 0
+        
+        return 0
         if index == -1:
             return MAX_TARGET
         if index < len(self.checkpoints):
@@ -570,10 +570,10 @@ class Blockchain(Logger):
     def get_chainwork(self, height=None) -> int:
         if height is None:
             height = max(0, self.height())
-        if constants.net.TESTNET:
+        
             # On testnet/regtest, difficulty works somewhat different.
             # It's out of scope to properly implement that.
-            return height
+        return height
         last_retarget = height // 2016 * 2016 - 1
         cached_height = last_retarget
         while _CHAINWORK_CACHE.get(self.get_hash(cached_height)) is None:
